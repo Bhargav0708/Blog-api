@@ -12,13 +12,15 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
+app.use("/", (req, res) => {
+  res.send("hello i am working");
+});
 app.use("/user", router);
 app.use("/post", postRouter);
 app.use("/comment", commentRouter);
 app.use("/interaction", interactionRoute);
 app.use(cookieParser());
 const PORT = process.env.PORT || 3000;
-
 const start = async () => {
   try {
     app.listen(PORT, () => {
