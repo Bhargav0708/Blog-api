@@ -8,5 +8,5 @@
     "package-lock.json",
     "prisma/migrations/*"
   ],
-  "exec": "ts-node src/index.ts"
+  "exec": "ts-node src/app.ts"
 }
