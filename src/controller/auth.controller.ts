@@ -109,6 +109,7 @@ export const authController = {
         });
       }
     } catch (error) {
+      console.log("the error is",error)
       res.status(400).json({
         msg: "something went wrong",
         success: false,
