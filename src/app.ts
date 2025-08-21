@@ -17,7 +17,7 @@ app.use("/post", postRouter);
 app.use("/comment", commentRouter);
 app.use("/interaction", interactionRoute);
 app.use(cookieParser());
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 const start = async () => {
   try {
